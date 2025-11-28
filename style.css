@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    /* outline: 1px solid red; */
 }
 
 html {
@@ -14,53 +12,76 @@ body {
     align-items: center;
     margin: 0px;
     height: 100%;
+    background-image: url(wood-texture.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #calculator {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    flex: 0 1 700px;
-    width: 700px;
-    aspect-ratio: 700/870;
-    font-size: 30px;
-    font-weight: bold;
-    background-color: #005588;
+    justify-content: center;
+    gap: 15px;
+    width: 490px;
+    height: 650px;
+    border-radius: 30px;
+    background-color: #404066;
+    color: #444444;
+    box-shadow: #000000 0px 0px 50px;
 }
 
 .row {
     display: flex;
-    justify-content: space-evenly;
-    height: calc(100 * 150%/870);
+    justify-content: center;
+    gap: 15px;
+    height: 100px;
 }
 
 .row * {
-    width: calc(100 * 150%/700);
+    width: 100px;
     align-content: center;
     padding: 5%;
     text-align: center;
-    border-radius: calc(100 * 40%/150);
+    border: 6px solid rgba(100, 0, 0, 0.2);
+    border-radius: 15px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.9em;
 }
 
 .digit {
-    background-color: #ffeeaa;
+    background-color: #ffdd88;
 }
 
 .operator {
-    background-color: #44aaaa;
+    background-color: #00bb99;
+    color: #ffffff
 }
 
 #display {
-    width: calc(100 * 490%/700);
-    text-align: right;
+    width: 330px;
     border-radius: 0px;
-    background-color: #889933;
+    background-color: #88aa44;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.4em;
+    font-weight: bold;
+    text-align: right;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 #ac {
-    background-color: #dd7799;
+    background-color: #dd4477;
+    color: #ffffff;
 }
 
 #equals {
-    background-color: #cc8844;
+    background-color: #dd8800;
+    color: #ffffff
+}
+
+.digit:hover, .operator:hover, #ac:hover, #equals:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
 }
