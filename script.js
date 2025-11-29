@@ -56,7 +56,10 @@ function handleOperator(operator) {
         operation = [result, operator, "", ""];
     } else if (operation[2]) {
         result = operate(parseFloat(operation[0]), operation[1], parseFloat(operation[2]));
-        operation = [result, operator, "", ""];
+        
+        if (parseFloat(result)) {
+            operation = [result, operator, "", ""];
+        }
     } else if (operation[0]) {
         operation[1] = operator;
     }
