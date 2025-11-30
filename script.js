@@ -51,13 +51,13 @@ function handleOperand(digit) {
 }
 
 function handleOperator(operator) {
-    if (parseFloat(operation[3])) {
+    if (operation[3] && !isNaN(operation[3])) {
         result = operation[3];
         operation = [result, operator, "", ""];
     } else if (operation[2]) {
         result = operate(parseFloat(operation[0]), operation[1], parseFloat(operation[2]));
 
-        if (parseFloat(result)) {
+        if (!isNaN(result)) {
             operation = [result, operator, "", ""];
         } else {
             operation = ["", "", "", result]
